@@ -1,0 +1,17 @@
+# Temp Files
+*~
+
+# Compiled Python
+*.pyc
+
+# Virtualenv Related
+.Python
+bin
+include
+lib
+lib64
+local
+scripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
