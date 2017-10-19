@@ -10,20 +10,20 @@ Quick and scalable deployment of a food donation webapp
  - easy to _extend_
  - great documentation and support
 
-### Set Up Google App Engine
+## Set Up Google App Engine
 
 [link to official documentation](https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env)
 
-### Running Locally
+## Running Locally
 
 execute the following from the project's root dir:
 
 `devappserver.py app.yaml`
 
 
-### Deploying
+## Deploying
 
 Run the following from the root directory of the project:
 
-`gcloud deploy`
+`gcloud app deploy`
 
