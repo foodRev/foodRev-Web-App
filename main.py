@@ -9,6 +9,12 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 # [END create_app]
 
+# [START auth]
+
+@app.route('/auth')
+def auth():
+    return render_template('firebase_auth.html')
+# [END auth]
 
 # [START form]
 @app.route('/form')
