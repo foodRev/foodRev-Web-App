@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html> <html lang="en"> <head>
     <meta charset="UTF-8">
     <title>Firebase Auth Page</title>
 
@@ -17,82 +15,83 @@
 
     <!--initialize Firebase-->
     <script>
-        var config = {
-            apiKey: "AIzaSyCYesi0U202Q-6bomnqPNx6bXQ6-bRIk-c",
-            authDomain: "foodrevwebapp.firebaseapp.com",
-            databaseURL: "https://foodrevwebapp.firebaseio.com",
-            projectId: "foodrevwebapp",
-            storageBucket: "foodrevwebapp.appspot.com",
-            messagingSenderId: "700621514609"
-        };
-        firebase.initializeApp(config);
+      var config = {
+        apiKey: "AIzaSyCYesi0U202Q-6bomnqPNx6bXQ6-bRIk-c",
+        authDomain: "foodrevwebapp.firebaseapp.com",
+        databaseURL: "https://foodrevwebapp.firebaseio.com",
+        projectId: "foodrevwebapp",
+        storageBucket: "foodrevwebapp.appspot.com",
+        messagingSenderId: "700621514609"
+      };
+
+    firebase.initializeApp(config);
     </script>
 
 
 
-</head>
-<body>
+  </head>
+  <body>
 
-<button onclick="signInPopup()">click to sign in with popup</button>
+    <button onclick="signInPopup()">click to sign in with popup</button>
 
-<!--Google Authentication-->
-<!--popup-->
-<script>
-    function signInPopup() {
+    <!--Google Authentication-->
+    <!--popup-->
+    <script>
+      function signInPopup() {
 
         // Using a popup.
         var provider = new firebase.auth.GoogleAuthProvider();
         provider.addScope('profile');
         provider.addScope('email');
         firebase.auth().signInWithPopup(provider).then(function (result) {
-            // This gives you a Google Access Token.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
+          // This gives you a Google Access Token.
+          var token = result.credential.accessToken;
+          // The signed-in user info.
+          var user = result.user;
 
-            console.log(user.email);
-            console.log(user.displayName);
+          console.log(user.email);
+          console.log(user.displayName);
         });
-    }
-</script>
+      }
+    </script>
 
-<script>
-    window.onload = function() {
+    <script>
+      window.onload = function() {
         initApp()
-    }
-</script>
-<button onclick="signInRedirect()">click to sign in with redirect</button>
-<!--redirect-->
-<script>
-    function signInRedirect() {
+      }
+    </script>
+    <button onclick="signInRedirect()">click to sign in with redirect</button>
+    <!--redirect-->
+    <script>
+      function signInRedirect() {
 
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider);
-    }
+      }
 
-</script>
-<script>
-    function initApp() {
+    </script>
+    <script>
+      function initApp() {
         firebase.auth().getRedirectResult().then(function(result) {
-            if (result.credential) {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                var token = result.credential.accessToken;
-                // ...
-            }
-            // The signed-in user info.
-            var user = result.user;
-            console.log(user.email);
-        }).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
+          if (result.credential) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
             // ...
+          }
+          // The signed-in user info.
+          var user = result.user;
+          console.log(user.email);
+        }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          // ...
         });
-    }
-</script>
-</body>
+      }
+    </script>
+  </body>
 </html>

@@ -10,6 +10,11 @@ app = Flask(__name__)
 # [END create_app]
 
 # [START auth]
+@app.route('/')
+def index():
+    return render_template('bootstrap_template.html')
+# [END auth]
+# [START auth]
 
 @app.route('/auth')
 def auth():
