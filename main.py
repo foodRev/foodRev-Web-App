@@ -9,13 +9,24 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 # [END create_app]
 
-# [START auth]
+# [START Login]
 @app.route('/')
-def index():
-    return render_template('bootstrap_template.html')
-# [END auth]
-# [START auth]
+def login():
+    return render_template('login_content.html')
+# [END Login]
 
+# [START Login Success Landing]
+@app.route('/login_success', methods=['POST'])
+def login_success():
+    name = request.form['name']
+    email = request.form['email']
+    return render_template(
+        'login_success_landing.html',
+        name=name,
+        email=email)
+# [END Login Success Landing]
+
+# [START auth]
 @app.route('/auth')
 def auth():
     return render_template('firebase_auth.html')
