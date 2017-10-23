@@ -1,0 +1,59 @@
+
+{% block content %}
+<!-- Card-->
+<div class="card" id="card_5">
+    <!-- Card Image -->
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap">
+    <!--Card content-->
+    <div class="card-body">
+      <!--Title-->
+      <h4 class="card-title text-center">Location</h4>
+
+
+      <!-- <div id="somecomponent" style="width: auto; height: 300px;"></div> -->
+
+      <!-- <script> -->
+<!-- $('#somecomponent').locationpicker(); -->
+<!-- </script> -->
+
+<div id="us7" style="width: auto; height: 400px;"></div>
+
+<br/>
+<br/>
+<div class="md-form">
+    <i class="fa fa-map-marker prefix"></i>
+    <input type="text" id="us7-address" class="form-control">
+    <label for="form2">Address</label>
+</div>
+
+  <script>
+$('#us7').locationpicker({
+    location: {
+        latitude:37.7749,
+        longitude: -122.4194
+    },
+    radius: 30000,
+    inputBinding: {
+        latitudeInput: $('#us7-lat'),
+        longitudeInput: $('#us7-lon'),
+        radiusInput: $('#us7-radius'),
+        locationNameInput: $('#us7-address')
+    },
+    enableAutocomplete: true,
+    autocompleteOptions: {
+        types: ['(cities)'],
+        componentRestrictions: {country: 'US'}
+    }
+});
+</script>
+
+      <div class="text-center">
+        <a href="#" class="btn btn-primary" onclick='scroll_to("#card_6")'>Review and Complete</a>
+      </div>
+    </form>
+  </div>
+
+</div>
+<!--/.Card-->
+
+{% endblock %}
