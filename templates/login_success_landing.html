@@ -1,5 +1,20 @@
 {% extends "firebase_bootstrap_md_template.html" %}
 {% block content %}
+
+
+
+<script charset="utf-8">
+
+  var userId = firebase.auth().currentUser.uid;
+    console.log(userId);
+
+
+  var user =firebase.auth().currentUser;
+  if (user) {
+    console.log(user.email);
+  }
+</script>
+
 <h1> your name is {{ name }} </h1>
 <h1> your email is {{ email }} </h1>
 {% endblock %}
