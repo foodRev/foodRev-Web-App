@@ -20,14 +20,14 @@ execute the following from the project's root dir:
 
 `devappserver.py app.yaml`
 
+When running locally, be sure to add the following requirements:
+
+`pip install -r requirements.txt -t lib`
+
 ## Deploying
 
 Run the following from the root directory of the project:
 
 `gcloud app deploy`
 
-## Add pip requirements
-When running locally, be sure to run the following:
-
-`pip install -r requirements.txt -t lib`
 
