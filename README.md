@@ -14,6 +14,12 @@ Quick and scalable deployment of a food donation webapp
 
 [link to official documentation](https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env)
 
+## Set Up Python Requirements
+
+Be sure to add the following requirements:
+
+`pip install -r requirements.txt -t lib`
+
 ## Running Locally
 
 execute the following from the project's root dir:
@@ -25,4 +31,5 @@ execute the following from the project's root dir:
 Run the following from the root directory of the project:
 
 `gcloud app deploy`
+
 
