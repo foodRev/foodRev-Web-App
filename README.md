@@ -26,3 +26,8 @@ Run the following from the root directory of the project:
 
 `gcloud app deploy`
 
+## Add pip requirements
+When running locally, be sure to run the following:
+
+`pip install -r requirements.txt -t lib`
+
