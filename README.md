@@ -18,7 +18,7 @@ Quick and scalable deployment of a food donation webapp
 
 execute the following from the project's root dir:
 
-`devappserver.py app.yaml`
+`dev_appserver.py app.yaml`
 
 ## Deploying
 
