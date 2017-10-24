@@ -10,11 +10,13 @@ Quick and scalable deployment of a food donation webapp
  - easy to _extend_
  - great documentation and support
  
-## Set Up Google App Engine
+## Setup
+ 
+### Set Up Google App Engine
 
 [link to official documentation](https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env)
 
-## Set Up Python Requirements
+### Set Up Python Requirements
 
 Be sure to add the following requirements:
 
