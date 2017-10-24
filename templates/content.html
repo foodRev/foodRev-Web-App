@@ -1,4 +1,4 @@
-{% extends "firebase_bootstrap_md_template.html" %}
+{% extends "main_template.html" %}
 
     {% block content %}
     <div class="container-fluid">
@@ -80,12 +80,6 @@
         // goto login page
 
           scroll_to("#card_2");
-          /*
-          post( "{{url_for('login_success')}}",
-            { name: user.displayName,
-              email: user.email
-            }
-          );*/
 
         }).catch(function(error) {
           // Handle Errors here.
