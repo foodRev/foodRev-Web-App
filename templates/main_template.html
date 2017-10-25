@@ -66,12 +66,26 @@
     <script src="static/js/bootstrap-datetimepicker.js"></script> 
 
     <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker12').datetimepicker({
-                inline: true,
-                sideBySide: true
-            });
+      $(function() {
+        $('#datepicker').datetimepicker({
+          format: 'MM/DD/YYYY'
         });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(function () {
+        $('#timepicker_start').datetimepicker({
+          format: 'LT'
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(function () {
+        $('#timepicker_end').datetimepicker({
+          format: 'LT'
+        });
+      });
     </script>
 
 
