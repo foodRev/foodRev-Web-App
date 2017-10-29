@@ -1,32 +1,40 @@
 {% extends "main_template.html" %}
 
     {% block content %}
-    <div class="container-fluid">
-    <br/>
-    {% include "card_1_login.html" %}
-    <br/>
-    {% include "card_2_get_items_ready.html" %}
-    <br/>
-    {% include "card_3_food_donation_description.html" %}
-    <br/>
-    {% include "card_4_time_window.html" %}
-    <br/>
-    {% include "card_5_poc.html" %}
-    <br/>
-    {% include "card_6_location.html" %}
-    <br/>
-    {% include "card_7_thanks.html" %}
-    </div>
 
+ <div  id="mainSlider" class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 
-
-    <script>
-      function scroll_to(next_target) {
-        $('html, body').animate({
-          scrollTop: $(next_target).offset().top
-        }, 1000);
-      }
-    </script>
 
     <!--Google Authentication-->
     <!--popup-->
@@ -129,4 +137,7 @@
         initApp()
       }
     </script>
+
+
   {% endblock %}
+
