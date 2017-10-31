@@ -1,40 +1,38 @@
 {% extends "main_template.html" %}
 
-    {% block content %}
+{% block content %}
 
- <div  id="mainSlider" class="slider fullscreen">
-    <ul class="slides">
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
+ <ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a class="active" href="#test-swipe-1">Step 1 Login</a></li>
+    <li class="tab col s3"><a href="#test-swipe-2">Prep</a></li>
+    <li class="tab col s3"><a href="#test-swipe-3">Description</a></li>
+    <li class="tab col s3"><a href="#test-swipe-4">Time</a></li>
+    <li class="tab col s3"><a href="#test-swipe-5">POC</a></li>
+    <li class="tab col s3"><a href="#test-swipe-6">Location</a></li>
+    <li class="tab col s3"><a href="#test-swipe-7">Thanks</a></li>
+  </ul>
+
+  <div id="test-swipe-1" class="col s12 blue">
+      {% include "card_1_login.html" %}
   </div>
-
+  <div id="test-swipe-2" class="col s12 blue">
+      {% include "card_2_get_items_ready.html" %}
+  </div>
+  <div id="test-swipe-3" class="col s12 blue">
+      {% include "card_3_food_donation_description.html" %}
+  </div>
+  <div id="test-swipe-4" class="col s12 blue">
+      {% include "card_4_time_window.html" %}
+  </div>
+  <div id="test-swipe-5" class="col s12 blue">
+      {% include "card_5_poc.html" %}
+  </div>
+  <div id="test-swipe-6" class="col s12 blue">
+      {% include "card_6_location.html" %}
+  </div>
+  <div id="test-swipe-7" class="col s12 blue">
+      {% include "card_7_thanks.html" %}
+  </div>
 
     <!--Google Authentication-->
     <!--popup-->
@@ -100,34 +98,6 @@
           // ...
         });
       }
-    </script>
-
-
-    <!-- POST FORM HACK -->
-    <script>
-      function post(path, params, method) {
-    method = method || "post"; // Set method to post by default if not specified.
-
-    // The rest of this code assumes you are not using a library.
-    // It can be made less wordy if you use one.
-    var form = document.createElement("form");
-    form.setAttribute("method", method);
-    form.setAttribute("action", path);
-
-    for(var key in params) {
-        if(params.hasOwnProperty(key)) {
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", key);
-            hiddenField.setAttribute("value", params[key]);
-
-            form.appendChild(hiddenField);
-         }
-    }
-
-    document.body.appendChild(form);
-    form.submit();
-}
     </script>
 
 

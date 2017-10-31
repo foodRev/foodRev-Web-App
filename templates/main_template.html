@@ -8,18 +8,13 @@
     <!-- TODO: include jinja template for title <21-10-17, kielian> -->
     <title>FoodRev</title>
 
-
     <!-- materialize css-->
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
-
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
 
     <!-- CSS -->
     <!-- Font Awesome -->
@@ -48,7 +43,7 @@
         messagingSenderId: "700621514609"
       };
 
-firebase.initializeApp(config);
+    firebase.initializeApp(config);
     </script>
 
   </head>
@@ -65,10 +60,6 @@ firebase.initializeApp(config);
     <!-- JS LIBS -->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-    <!-- Swipe sensing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-
 
     <!-- Date Time Picker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script> 
@@ -96,35 +87,6 @@ firebase.initializeApp(config);
         });
       });
     </script>
-    <script>
-      $(document).ready(function(){
-        $('.slider').slider();
-        $('.slider').slider('pause');
-      });
-    </script>
-
-    <script>
-      var mainSlider = document.getElementById('mainSlider');
-
-      // create a simple instance
-      // by default, it only adds horizontal recognizers
-      var mc = new Hammer.Manager(mainSlider);
-
-      mc.add(new Hammer.Swipe({direction:Hammer.DIRECTION_HORIZONTAL, threshold:80, pointers: 0}));
-
-      mc.on("swipeleft", function(ev) {
-          //do what you want here
-          $('.slider').slider('next');
-          $('.slider').slider('pause');
-        });
-      mc.on("swiperight", function(ev) {
-          $('.slider').slider('prev');
-          $('.slider').slider('pause');
-        }
-      );
-
-    </script>
-
 
   </body>
 </html>
