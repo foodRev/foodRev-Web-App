@@ -15,6 +15,12 @@ def content():
     return render_template('content.html')
 # [END Login]
 
+# [START Login]
+@app.route('/test')
+def test():
+    return render_template('test.html')
+# [END Login]
+
 @app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.

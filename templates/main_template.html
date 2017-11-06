@@ -8,22 +8,25 @@
     <!-- TODO: include jinja template for title <21-10-17, kielian> -->
     <title>FoodRev</title>
 
-    <!-- materialize css-->
-
-    <!--Import Google Icon Font-->
+    <!-- START FONTS AND ICONS-->
+    <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-    <!-- CSS -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- END FONTS AND ICONS-->
 
+
+    <!-- START_CSS -->
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- DateTimePicker -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <!-- END_CSS -->
 
-    <!-- FIREBASE -->
+
+    <!-- START FIREBASE -->
     <!--main firebase import-->
     <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
     <!--other firebase imports-->
@@ -34,17 +37,18 @@
     <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase-messaging.js"></script>
     <!--initialize Firebase-->
     <script>
-      var config = {
+        var config = {
         apiKey: "AIzaSyCYesi0U202Q-6bomnqPNx6bXQ6-bRIk-c",
-        authDomain: "foodrevwebapp.firebaseapp.com",
-        databaseURL: "https://foodrevwebapp.firebaseio.com",
-        projectId: "foodrevwebapp",
-        storageBucket: "foodrevwebapp.appspot.com",
-        messagingSenderId: "700621514609"
-      };
+                authDomain: "foodrevwebapp.firebaseapp.com",
+                databaseURL: "https://foodrevwebapp.firebaseio.com",
+                projectId: "foodrevwebapp",
+                storageBucket: "foodrevwebapp.appspot.com",
+                messagingSenderId: "700621514609"
+        };
 
-    firebase.initializeApp(config);
+        firebase.initializeApp(config);
     </script>
+    <!-- END FIREBASE -->
 
   </head>
   <body>
@@ -53,40 +57,51 @@
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src='https://maps.google.com/maps/api/js?key=AIzaSyCOPEj3C1Qku6pvI5AL6PIOWkbpYaNbB5Y&sensor=false&libraries=places'></script>
-
-    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery-locationpicker/0.1.12/locationpicker.jquery.min.js'></script>
-
-    <!-- JS LIBS -->
-    <!-- Compiled and minified JavaScript -->
+    <!-- materialize css theme TODO replace with Material Design Components -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-    <!-- Date Time Picker -->
+    <!-- START_FEATURE_JS_LIBS -->
+    <!-- START GMap Location Picker -->
+    <script type="text/javascript" src='https://maps.google.com/maps/api/js?key=AIzaSyCOPEj3C1Qku6pvI5AL6PIOWkbpYaNbB5Y&sensor=false&libraries=places'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery-locationpicker/0.1.12/locationpicker.jquery.min.js'></script>
+    <!-- END GMap Location Picker -->
+
+    <!-- START Date Time Picker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script> 
     <script src="static/js/bootstrap-datetimepicker.js"></script> 
-
+    <!-- Date Time Picker Setup -->
     <script type="text/javascript">
       $(function() {
-        $('#datepicker').datetimepicker({
-          format: 'MM/DD/YYYY'
-        });
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(function () {
-        $('#timepicker_start').datetimepicker({
-          format: 'LT'
-        });
+            $('#datepicker').datetimepicker({
+                format: 'MM/DD/YYYY'
+            });
       });
     </script>
     <script type="text/javascript">
-      $(function () {
-        $('#timepicker_end').datetimepicker({
-          format: 'LT'
-        });
-      });
+$(function () {
+    $('#timepicker_start').datetimepicker({
+format: 'LT'
+});
+    });
     </script>
+    <script type="text/javascript">
+$(function () {
+    $('#timepicker_end').datetimepicker({
+format: 'LT'
+});
+    });
+    </script>
+    <!-- END Date Time Picker -->
 
+    <!-- Start tab javascript -->
+
+
+    <script>
+      function gotoTab(tabName) {
+          $('ul.tabs').tabs('select_tab', tabName);
+      }
+    </script>
+    <!-- end tab javascript -->
+    <!-- END_FEATURE_JS_LIBS -->
   </body>
 </html>

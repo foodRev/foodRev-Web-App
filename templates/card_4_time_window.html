@@ -1,13 +1,13 @@
-
+{% extends "card_template.html" %}
 {% block content %}
 <!-- Card-->
-<div class="card" id="card_4">
-  <!--Card content-->
-  <div class="card-body">
-    <!--Title-->
+<div class="card-content">
+  <!--Title-->
+  <span class="card-title">
     <h4 class="card-title text-center">Date &amp; Time</h4>
     <h5 class="card-title text-center">click icons on the right to set</h5>
-
+  </span>
+  <!-- Content -->
     <div class='input-group date md-form' id='datepicker'>
       <input type='text' id='datepicker_input' class="form-control" />
       <label for="datepicker_input" class="">Donation Date</label>
@@ -29,7 +29,6 @@
         <span class="fa fa-clock-o"></span>
       </span>
     </div>
-
       <style>
         .fa-chevron-up {
           color:black
@@ -40,12 +39,8 @@
       </style>
 
       <div class="text-center">
-        <a href="#" class="btn btn-primary" onclick='scroll_to("#card_5")'>Next</a>
+        <a href="#" class="btn btn-primary" onclick='gotoTab("test-swipe-5")'>Next</a>
       </div>
-    </form>
-  </div>
 
 </div>
-<!--/.Card-->
-
 {% endblock %}
