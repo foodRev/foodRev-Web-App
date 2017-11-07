@@ -1,33 +1,87 @@
 {% extends "card_template.html" %}
 {% block content %}
 <!-- Card-->
-<div class="card-content">
+<div class="card-content" id="card-4">
+
+  <script>
+calendarOn="false";
+function toggleCalendar() {
+  if(calendarOn == "false") {
+    document.getElementById('calendar-on').click();
+    calendarOn="true";
+    console.log("on");
+  } else if(calendarOn == "true") { document.getElementById('off-dummy').click();
+    calendarOn="false";
+    console.log("off");
+  }
+}
+  </script>
+  <script>
+timeStartOn="false";
+function toggleTimeStart() {
+  if(timeStartOn == "false") {
+    document.getElementById('time-start-on').click();
+    timeStartOn="true";
+    console.log("on");
+  } else if(timeStartOn == "true") { document.getElementById('off-dummy').click();
+    timeStartOn="false";
+    console.log("off");
+  }
+}
+  </script>
+  <script>
+timeStopOn="false";
+function toggleTimeStop() {
+  if(timeStopOn == "false") {
+    document.getElementById('time-stop-on').click();
+    timeStopOn="true";
+    console.log("on");
+  } else if(timeStopOn == "true") { document.getElementById('off-dummy').click();
+    timeStopOn="false";
+    console.log("off");
+  }
+}
+  </script>
   <!--Title-->
   <span class="card-title">
-    <h4 class="card-title text-center">Date &amp; Time</h4>
-    <h5 class="card-title text-center">click icons on the right to set</h5>
+    <h4 class="card-title text-center" id="off-dummy">Date &amp; Time</h4>
+    <h5 class="card-title text-center">click icons on the left to set</h5>
   </span>
   <!-- Content -->
-    <div class='input-group date md-form' id='datepicker'>
-      <input type='text' id='datepicker_input' class="form-control" />
-      <label for="datepicker_input" class="">Donation Date</label>
-      <span class="input-group-addon">
-        <span class="fa fa-calendar"></span>
-      </span>
+
+  
+  <!-- date picker -->
+  <div class="row">
+    <div class='input-field input-group date md-form col s11 m8 offset-m2' id='datepicker'>
+      <div class="row">
+        <i class="fa fa-calendar prefix grey-text" onclick="toggleCalendar();"></i>
+        <input type='text' id='datepicker_input' class="form-control" />
+        <label for="datepicker_input">Donation Date</label>
+      </div>
+      <i class="input-group-addon" id="calendar-on"></i>
     </div>
-    <div class='input-group date md-form' id='timepicker_start'>
-      <input type='text' id='timepicker_start_input' class="form-control" />
-      <label for="timepicker_start__input" class="">Time Window Start</label>
-      <span class="input-group-addon">
-        <span class="fa fa-clock-o"></span>
-      </span>
+  </div>
+  <!-- time start picker -->
+  <div class="row">
+    <div class='input-field input-group date md-form col s11 m8 offset-m2' id='timepicker_start'>
+      <div class="row">
+        <i class="fa fa-clock-o prefix grey-text" onclick="toggleTimeStart();"></i>
+        <input type='text' id='timepicker_start_input' class="form-control" />
+        <label for="timepicker_start_input" class="">Time Window Start</label>
+      </div>
+      <i class="input-group-addon" id="time-start-on"></i>
     </div>
-    <div class='input-group date md-form' id='timepicker_end'>
-      <input type='text' id='timepicker_end_input' class="form-control" />
-      <label for="timepicker_end_datepicker_input" class="">Time Window Stop</label>
-      <span class="input-group-addon">
-        <span class="fa fa-clock-o"></span>
-      </span>
+  </div>
+    <!-- time stop picker -->
+    <div class="row">
+      <div class='input-field input-group date md-form col s11 m8 offset-m2' id='timepicker_stop'>
+        <div class="row">
+          <i class="fa fa-clock-o prefix grey-text" onclick="toggleTimeStop();"></i>
+          <input type='text' id='datepicker_input' class="form-control" />
+          <label for="datepicker_input">Time Window Stop</label>
+        </div>
+        <i class="input-group-addon" id="time-stop-on"></i>
+      </div>
     </div>
       <style>
         .fa-chevron-up {
@@ -38,8 +92,10 @@
         }
       </style>
 
-      <div class="text-center">
+      <div class="row">
+        <div class="col s1 offset-s8 m2 offset-m8">
         <a href="#" class="btn btn-primary" onclick='gotoTab("test-swipe-5")'>Next</a>
+      </div>
       </div>
 
 </div>
